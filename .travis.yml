@@ -1,11 +1,20 @@
 language: python
 python:
-    - nightly
     - 3.6
     - 3.5
     - 3.4
     - 2.7
 sudo: false
+matrix:
+  include:
+    - os: linux
+      arch: arm64
+      dist: bionic
+      python: nightly
+    - os: linux
+      arch: amd64
+      dist: bionic
+      python: nightly
 os: linux
 arch: 
     - amd64
