@@ -1,5 +1,4 @@
 language: python
-sudo: false
 matrix:
   include:
     - os: linux
@@ -42,6 +41,9 @@ matrix:
       arch: amd64
       dist: bionic
       python: 2.7
+  allow_failures:
+    - python: "nightly"
+sudo: false
 env:
 install:
     - pip install --upgrade pytest
@@ -51,7 +53,4 @@ script:
     - py.test -v --cov nbformat nbformat
 after_success:
     - codecov
-matrix:
-  allow_failures:
-    - python: "nightly"
-
+  
