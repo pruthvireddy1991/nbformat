@@ -11,35 +11,35 @@ matrix:
       python: nightly
     - os: linux
       arch: arm64
-      dist: bionic
+      dist: xenial
       python: 3.6
     - os: linux
       arch: amd64
-      dist: bionic
+      dist: xenial
       python: 3.6
     - os: linux
       arch: arm64
-      dist: bionic
+      dist: xenial
       python: 3.5
     - os: linux
       arch: amd64
-      dist: bionic
+      dist: xenial
       python: 3.5
     - os: linux
       arch: arm64
-      dist: bionic
+      dist: xenial
       python: 3.4
     - os: linux
       arch: amd64
-      dist: bionic
+      dist: xenial
       python: 3.4
     - os: linux
       arch: arm64
-      dist: bionic
+      dist: xenial
       python: 2.7
     - os: linux
       arch: amd64
-      dist: bionic
+      dist: xenial
       python: 2.7
   allow_failures:
     - python: "nightly"
