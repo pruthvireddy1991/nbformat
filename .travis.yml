@@ -1,4 +1,14 @@
 language: python
+python:
+    - 3.6
+    - 3.5
+    - 3.4
+    - 2.7
+os: linux
+arch:
+    - amd64
+    - arm64
+sudo: false
 matrix:
   include:
     - os: linux
@@ -9,41 +19,8 @@ matrix:
       arch: amd64
       dist: bionic
       python: nightly
-    - os: linux
-      arch: arm64
-      dist: xenial
-      python: 3.6
-    - os: linux
-      arch: amd64
-      dist: xenial
-      python: 3.6
-    - os: linux
-      arch: arm64
-      dist: xenial
-      python: 3.5
-    - os: linux
-      arch: amd64
-      dist: xenial
-      python: 3.5
-    - os: linux
-      arch: arm64
-      dist: xenial
-      python: 3.4
-    - os: linux
-      arch: amd64
-      dist: xenial
-      python: 3.4
-    - os: linux
-      arch: arm64
-      dist: xenial
-      python: 2.7
-    - os: linux
-      arch: amd64
-      dist: xenial
-      python: 2.7
   allow_failures:
     - python: "nightly"
-sudo: false
 env:
 install:
     - pip install --upgrade pytest
@@ -53,4 +30,3 @@ script:
     - py.test -v --cov nbformat nbformat
 after_success:
     - codecov
-  
